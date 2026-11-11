@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#014976">
+  <meta name="description" content="مفاجأة عيد ميلاد من نوادي صناع الحياة بالجامعات المصرية لـ محمود طارق — كل سنة وأنت طيب.">
+  <title>كل سنة وأنت طيب يا محمود | نوادي صناع الحياة</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lalezar&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <a class="skip-link" id="skipLink" href="#messageCard">تخطَّ المقدمة واقرأ الرسالة</a>
+
+  <main class="stage" id="stage" aria-label="مفاجأة عيد ميلاد محمود طارق">
+
+    <!-- ===== Atmosphere ===== -->
+    <div class="sky layer" aria-hidden="true">
+      <div class="sky-glow glow-a"></div>
+      <div class="sky-glow glow-b"></div>
+      <div class="light-beam"></div>
+    </div>
+
+    <div class="grid-wrap layer" aria-hidden="true">
+      <div class="grid-plane"></div>
+    </div>
+
+    <canvas class="layer canvas-ambient" id="ambient" aria-hidden="true"></canvas>
+
+    <div class="streaks" aria-hidden="true">
+      <span class="streak" style="--x:12%; --delay:0s;  --dur:9s;  --len:34vh"></span>
+      <span class="streak" style="--x:29%; --delay:2.4s;--dur:11s; --len:46vh"></span>
+      <span class="streak" style="--x:47%; --delay:5.1s;--dur:8.5s;--len:28vh"></span>
+      <span class="streak" style="--x:63%; --delay:1.2s;--dur:13s; --len:52vh"></span>
+      <span class="streak" style="--x:78%; --delay:3.8s;--dur:10s; --len:38vh"></span>
+      <span class="streak" style="--x:91%; --delay:6.4s;--dur:12s; --len:44vh"></span>
+    </div>
+
+    <!-- ===== Act 1 — the three opening lines ===== -->
+    <div class="intro" id="intro" aria-hidden="true">
+      <div class="intro-line" data-line="1">
+        <span class="intro-rule"></span>
+        <p>كل سنة بتعدّي...</p>
+        <span class="intro-rule"></span>
+      </div>
+      <div class="intro-line" data-line="2">
+        <p>وفي ناس بتسيب أثر.</p>
+      </div>
+      <div class="intro-line intro-line--amber" data-line="3">
+        <p>وانت واحد منهم.</p>
+      </div>
+    </div>
+
+    <!-- ===== Act 2 — the energy charge ===== -->
+    <div class="charge" id="charge" aria-hidden="true">
+      <div class="charge-halo"></div>
+      <div class="charge-ring ring-1"></div>
+      <div class="charge-ring ring-2"></div>
+      <div class="charge-ring ring-3"></div>
+      <div class="charge-core"></div>
+      <div class="countdown" id="countdown">٣</div>
+    </div>
+
+    <!-- ===== Act 3 — the name reveal ===== -->
+    <div class="reveal" id="reveal" aria-hidden="true">
+      <div class="reveal-inner">
+        <p class="reveal-kicker">كل سنة وأنت طيب يا</p>
+
+        <div class="reveal-name-wrap">
+          <div class="reveal-aura" aria-hidden="true"></div>
+          <h1 class="reveal-name" id="revealName" aria-label="محمود طارق">
+            <span class="word" style="--i:0"><span class="word-inner">محمود</span></span>
+            <span class="word" style="--i:1"><span class="word-inner">طارق</span></span>
+          </h1>
+        </div>
+
+        <p class="reveal-latin" aria-hidden="true">MAHMOUD TAREK</p>
+        <p class="reveal-hint" id="revealHint">كل حاجة حلوة بتبدأ بلحظة ✨</p>
+      </div>
+    </div>
+
+    <!-- ===== Fireworks & confetti layer ===== -->
+    <canvas class="canvas-fx" id="fx" aria-hidden="true"></canvas>
+
+    <!-- ===== Act 4 — the heartfelt message ===== -->
+    <section class="message" id="message" aria-labelledby="messageTitle" aria-hidden="true">
+      <article class="card" id="messageCard" tabindex="-1">
+        <span class="card-corner tl" aria-hidden="true"></span>
+        <span class="card-corner tr" aria-hidden="true"></span>
+        <span class="card-corner bl" aria-hidden="true"></span>
+        <span class="card-corner br" aria-hidden="true"></span>
+
+        <div class="card-scroll">
+          <p class="eyebrow"><span class="eyebrow-dot"></span> من قلب نوادي صناع الحياة</p>
+
+          <h2 id="messageTitle">
+            كل سنة وأنت طيب يا حودة
+            <span class="title-star" aria-hidden="true">★</span>
+          </h2>
+
+          <p class="lead">
+            سنة جديدة من عمرك، وكلنا واثقين إنها هتكون سنة مليانة خطوات أكبر،
+            وأحلام قرّبت أكتر، وضحكة مش بتفارقك.
+          </p>
+
+          <p>
+            شكرًا لكل مجهود بتبذله، ولكل مرة بتقف مع الفريق وتخلي الشغل أحلى.
+            وجودك بينا بيفرق بجد ده حاجة كلنا شايفينها.
+          </p>
+
+          <p>
+            النهاردة من حقك تحتفل، ومن حقك تكون أسعد واحد.
+            ربنا يديك الصحة والعافية، ويجعلها سنة خير ونجاح وتوفيق.
+            <strong>عقبال مية سنة يا رب.</strong>
+          </p>
+        </div>
+
+        <div class="card-foot">
+          <div class="actions">
+            <button class="btn btn-primary" id="skyBtn" type="button">
+              <span class="btn-sheen" aria-hidden="true"></span>
+              <span class="btn-label">أضئ السماء</span>
+              <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M12 2.6l1.9 5.2 5.5.3-4.3 3.5 1.5 5.4L12 13.8l-4.6 3.2 1.5-5.4-4.3-3.5 5.5-.3L12 2.6z"/>
+              </svg>
+            </button>
+            <button class="btn btn-ghost" id="replayBtn" type="button">أعد المفاجأة</button>
+          </div>
+
+          <p class="card-hint">المس أي مكان في الصفحة... السماء منوّرة بيك.</p>
+        </div>
+      </article>
+    </section>
+
+    <!-- ===== Act 5 — the emotional closing ===== -->
+    <footer class="closing" id="closing" aria-hidden="true">
+      <p class="closing-greet">كل سنة وأنت طيب يا حودة</p>
+
+      <div class="closing-brand">
+        <span class="closing-mark">
+          <img src="assets/logo.png" alt="شعار نوادي صناع الحياة" width="72" height="72">
+        </span>
+        <span class="closing-brand-text">
+          <span class="closing-org">نوادي صناع الحياة بالجامعات المصرية</span>
+          <span class="closing-tag">حيث كل خطوة... بتصنع حياة.</span>
+        </span>
+      </div>
+
+      <div class="closing-credit">
+        <span class="credit-team">فريق ITUELM</span>
+        <span class="credit-sep" aria-hidden="true"></span>
+        <span class="credit-name">كريم شعير</span>
+        <span class="credit-role">المسؤول المركزي للجنة الـ IT</span>
+        <span class="credit-line">LifeMakersClub IT | ITUELM</span>
+      </div>
+    </footer>
+
+    <div class="flash" id="flash" aria-hidden="true"></div>
+    <div class="vignette" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+
+    <div class="controls">
+      <button class="ctrl" id="skipBtn" type="button">تخطي المقدمة</button>
+    </div>
+
+    <p class="sr-only" id="live" aria-live="polite"></p>
+  </main>
+
+  <noscript>
+    <div class="noscript">
+      <h1>كل سنة وأنت طيب يا محمود</h1>
+      <p>من قلب نوادي صناع الحياة بالجامعات المصرية ❤️ فعّل الجافاسكربت لتشاهد المفاجأة كاملة.</p>
+    </div>
+  </noscript>
+
+  <script src="app.js"></script>
+</body>
+</html>
